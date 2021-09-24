@@ -1,6 +1,60 @@
-<mat-tab-group mat-align-tabs="center">
-  <mat-tab label="First"
-    >Content 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+<div class="">
+  <!-- <h2>Dynamic Tabs Example</h2>
+  <div>
+    <mat-form-field style="width: 100%">
+      <table class="example-full-width" cellspacing="0">
+        <tr>
+          <td>
+            <mat-label>Tab Name</mat-label>
+            <input matInput [(ngModel)]="tabt" />
+          </td>
+          <td>
+            <button
+              mat-raised-button
+              class="example-add-tab-button"
+              (click)="addTab(selectAfterAdding.checked)"
+            >
+              Add new tab
+            </button>
+          </td>
+          <td>
+            <mat-checkbox #selectAfterAdding>
+              Select tab after adding
+            </mat-checkbox>
+          </td>
+        </tr>
+      </table>
+    </mat-form-field>
+  </div> -->
+
+  <mat-tab-group
+    mat-stretch-tabs
+    [selectedIndex]="selected.value"
+    (selectedIndexChange)="selected.setValue($event)"
+  >
+    <mat-tab *ngFor="let tab of tabs; let index = index" [label]="tab">
+      <!-- <br />
+      <br /> -->
+      Contents for {{ tab }} tab
+      <!-- <p>Today's item: {{ item }}</p> -->
+      <!-- <button
+        mat-raised-button
+        class="example-delete-tab-button"
+        [disabled]="tabs.length === 1"
+        (click)="removeTab(index)"
+      >
+        Delete Tab
+      </button> -->
+      <!-- <br />
+      <br />
+      <br /> -->
+    </mat-tab>
+  </mat-tab-group>
+</div>
+
+<!-- <mat-tab-group mat-align-tabs="center" *ngFor="let hero of heroes">
+  <mat-tab label="First">
+    Content 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
     perferendis voluptates nisi distinctio eveniet modi tempora aliquid
     assumenda vero iste, ratione, ipsa odit. Quidem maxime vitae ipsa, esse
     officiis et.</mat-tab
@@ -23,4 +77,8 @@
     voluptatem natus officia! Esse voluptates quam iste, ut adipisci nesciunt
     consectetur ad aliquid.</mat-tab
   >
-</mat-tab-group>
+</mat-tab-group> -->
+
+<!-- <div>
+  <img class="thumbnail-image" src="getImage()" alt="...">
+</div> -->

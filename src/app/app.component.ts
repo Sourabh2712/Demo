@@ -11,10 +11,13 @@ import { Renderer2, ElementRef, RendererFactory2 } from '@angular/core';
 export class AppComponent {
   constructor(private renderer: Renderer2, private el: ElementRef) {}
   title = 'Demo';
-  @Input() time: any;
-  exampleHost: ComponentPortal<any> | undefined;
+  // @Input() time: any;
+  tabs = ['Tab 1', 'Tab 2', 'Tab 3', 'Tab 4'];
+  currentItem = 'Television';
+  tabConfiguration = {};
+  // exampleHost: ComponentPortal<any> | undefined;
 
   ngOnInit() {
-    this.exampleHost = new ComponentPortal(CardComponent);
+    // this.exampleHost = new ComponentPortal(CardComponent);
   }
 }

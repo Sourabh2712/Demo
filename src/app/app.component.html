@@ -1,15 +1,10 @@
-<!-- <div [height]="200" [width]="200"  [times]="4" appTabs></div> -->
+<!-- <div [height]="200" [width]="200" [times]="4" appTabs></div> -->
 
-<!-- <ng-template [cdkPortalHost]="exampleHost" [time]="2"></ng-template> -->
+<!-- <ng-template [cdkPortalHost]="exampleHost" [item]="currentItem"></ng-template> -->
 
-<mat-tab-group mat-align-tabs="center" [times]="4" appTabs>
-  <mat-tab label="First">Content 1</mat-tab>
+<!-- <mat-tab-group mat-align-tabs="center">
+  <mat-tab label="First" [times]="4" appTabs>Content 1</mat-tab>
   <mat-tab label="Second">Content 2</mat-tab>
   <mat-tab label="Third">Content 3</mat-tab>
-</mat-tab-group>
-
-<mat-tab-group mat-align-tabs="center" [times]="4" appTabs>
-  <mat-tab label="First">Content 1</mat-tab>
-  <mat-tab label="Second">Content 2</mat-tab>
-  <mat-tab label="Third">Content 3</mat-tab>
-</mat-tab-group>
+</mat-tab-group> -->
+<app-card [tabs]="tabs" [config]="tabConfiguration"></app-card>

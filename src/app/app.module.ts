@@ -11,6 +11,7 @@ import { TabsDirective } from './tabs.directive';
 import { PortalModule } from '@angular/cdk/portal';
 import { ExampleDirective } from './example.directive';
 import { FormDirective } from './form.directive';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { FormDirective } from './form.directive';
     AngularMaterialModule,
     MatCardModule,
     PortalModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

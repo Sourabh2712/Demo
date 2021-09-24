@@ -16,8 +16,8 @@ export class TabsDirective {
   constructor(private renderer: Renderer2, private el: ElementRef) {}
 
   ngOnInit() {
-    for (let i = 0; i < this.times; i++) {
-      const div = this.renderer.createElement('mat-tab-label-container');
+    for (let i = 1; i < this.times; i++) {
+      const div = this.renderer.createElement('tbs');
       const text = this.renderer.createText('Content 4');
       const divv = this.renderer.createElement('div');
       //! this.renderer.setStyle(div, 'color', '#fff');
