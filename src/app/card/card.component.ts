@@ -1,6 +1,5 @@
 import { ComponentPortal } from '@angular/cdk/portal';
 import { Component, Input, OnInit } from '@angular/core';
-// import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
 import { ElementRef, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
@@ -13,6 +12,7 @@ import { FormControl } from '@angular/forms';
 export class CardComponent implements OnInit {
   @Input() tabs: any;
   @Input() config: any;
+
   constructor() {}
 
   // exampleHost!: ComponentPortal<any>;
@@ -25,26 +25,26 @@ export class CardComponent implements OnInit {
   // tabs: any[] = [];
   selected = new FormControl(0);
   tabt: string = '';
-
   @Input() item = '';
-
-  // addTab(selectAfterAdding: boolean) {
-  //   if (this.tabt != '') {
-  //     this.tabs.push(this.tabt);
-  //   } else {
-  //     this.tabs.push('New');
-  //   }
-
-  //   this.tabt = '';
-
-  //   if (selectAfterAdding) {
-  //     this.selected.setValue(this.tabs.length - 1);
-  //   }
-  // }
-
-  // removeTab(index: number) {
-  //   this.tabs.splice(index, 1);
-  // }
 }
 
 export class TabGroupAlignExample {}
+
+// ?This function s for the adding tab dynamically when we click on addfuntin in HTML if want to add put these line in export class
+// addTab(selectAfterAdding: boolean) {
+//   if (this.tabt != '') {
+//     this.tabs.push(this.tabt);
+//   } else {
+//     this.tabs.push('New');
+//   }
+
+//   this.tabt = '';
+
+//   if (selectAfterAdding) {
+//     this.selected.setValue(this.tabs.length - 1);
+//   }
+// }
+
+// removeTab(index: number) {
+//   this.tabs.splice(index, 1);
+// }

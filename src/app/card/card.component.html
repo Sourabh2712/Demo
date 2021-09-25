@@ -1,5 +1,45 @@
 <div class="">
-  <!-- <h2>Dynamic Tabs Example</h2>
+  <mat-tab-group
+    mat-stretch-tabs
+    [selectedIndex]="selected.value"
+    (selectedIndexChange)="selected.setValue($event)"
+  >
+    <mat-tab *ngFor="let tab of tabs; let index = index" [label]="tab">
+      Contents for {{ tab }} tab
+    </mat-tab>
+  </mat-tab-group>
+</div>
+
+<!-- *This is normal Material tabs in angular -->
+<!-- <mat-tab-group mat-align-tabs="center" *ngFor="let hero of heroes">
+  <mat-tab label="First">
+    Content 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+    perferendis voluptates nisi distinctio eveniet modi tempora aliquid
+    assumenda vero iste, ratione, ipsa odit. Quidem maxime vitae ipsa, esse
+    officiis et.</mat-tab
+  >
+  <mat-tab label="Second"
+    >Content 2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel nam
+    alias assumenda sunt! Quis explicabo ex molestiae eveniet magnam inventore,
+    praesentium numquam soluta doloremque deleniti repellendus saepe pariatur?
+    Similique, iure.</mat-tab
+  >
+  <mat-tab label="Third"
+    >Content 3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+    repellendus iusto, amet facilis, voluptatem, qui vitae necessitatibus animi
+    voluptas eligendi nostrum non nisi nihil totam officiis sapiente. Non,
+    commodi possimus? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    At, ad reiciendis labore veritatis cupiditate aliquid dolores natus officiis
+    iusto. Numquam laudantium amet sequi nostrum perspiciatis illum officiis
+    accusamus cum sunt. Lorem ipsum, dolor sit amet consectetur adipisicing
+    elit. Libero itaque aliquid eos explicabo nam facere quos perferendis
+    voluptatem natus officia! Esse voluptates quam iste, ut adipisci nesciunt
+    consectetur ad aliquid.</mat-tab
+  >
+</mat-tab-group> -->
+
+<!-- ?Here is the Function For creating new TABS Dynamiclly Which is not reqired in my topic if want to add in my code shift the to top of the mat-tab group-->
+<!-- <h2>Dynamic Tabs Example</h2>
   <div>
     <mat-form-field style="width: 100%">
       <table class="example-full-width" cellspacing="0">
@@ -27,57 +67,19 @@
     </mat-form-field>
   </div> -->
 
-  <mat-tab-group
-    mat-stretch-tabs
-    [selectedIndex]="selected.value"
-    (selectedIndexChange)="selected.setValue($event)"
-  >
-    <mat-tab *ngFor="let tab of tabs; let index = index" [label]="tab">
-      <!-- <br />
-      <br /> -->
-      Contents for {{ tab }} tab
-      <!-- <p>Today's item: {{ item }}</p> -->
-      <!-- <button
+<!-- ?This par is in 1st mat-tab where content is{{tab}} -->
+<!-- <p>Today's item: {{ item }}</p>
+<button
         mat-raised-button
         class="example-delete-tab-button"
         [disabled]="tabs.length === 1"
         (click)="removeTab(index)"
       >
         Delete Tab
-      </button> -->
-      <!-- <br />
+      </button>
+<br />
       <br />
       <br /> -->
-    </mat-tab>
-  </mat-tab-group>
-</div>
-
-<!-- <mat-tab-group mat-align-tabs="center" *ngFor="let hero of heroes">
-  <mat-tab label="First">
-    Content 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
-    perferendis voluptates nisi distinctio eveniet modi tempora aliquid
-    assumenda vero iste, ratione, ipsa odit. Quidem maxime vitae ipsa, esse
-    officiis et.</mat-tab
-  >
-  <mat-tab label="Second"
-    >Content 2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel nam
-    alias assumenda sunt! Quis explicabo ex molestiae eveniet magnam inventore,
-    praesentium numquam soluta doloremque deleniti repellendus saepe pariatur?
-    Similique, iure.</mat-tab
-  >
-  <mat-tab label="Third"
-    >Content 3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
-    repellendus iusto, amet facilis, voluptatem, qui vitae necessitatibus animi
-    voluptas eligendi nostrum non nisi nihil totam officiis sapiente. Non,
-    commodi possimus? Lorem ipsum dolor sit amet consectetur adipisicing elit.
-    At, ad reiciendis labore veritatis cupiditate aliquid dolores natus officiis
-    iusto. Numquam laudantium amet sequi nostrum perspiciatis illum officiis
-    accusamus cum sunt. Lorem ipsum, dolor sit amet consectetur adipisicing
-    elit. Libero itaque aliquid eos explicabo nam facere quos perferendis
-    voluptatem natus officia! Esse voluptates quam iste, ut adipisci nesciunt
-    consectetur ad aliquid.</mat-tab
-  >
-</mat-tab-group> -->
 
 <!-- <div>
   <img class="thumbnail-image" src="getImage()" alt="...">

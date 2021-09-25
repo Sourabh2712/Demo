@@ -15,6 +15,8 @@ export class AppComponent {
   tabs = ['Tab 1', 'Tab 2', 'Tab 3', 'Tab 4'];
   currentItem = 'Television';
   tabConfiguration = {};
+
+  // ?  This code is for adding Component portal to the child
   // exampleHost: ComponentPortal<any> | undefined;
 
   ngOnInit() {

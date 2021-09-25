@@ -1,10 +1,14 @@
+<!-- # This is Main Code where we give the configuration to the code it will append to the child component -->
+<app-card [tabs]="tabs" [config]="tabConfiguration"></app-card>
+
+<!-- *This is for calling the directives for the creating render2 -->
 <!-- <div [height]="200" [width]="200" [times]="4" appTabs></div> -->
 
+<!-- $ This is process for the creating tab susing component portal -->
 <!-- <ng-template [cdkPortalHost]="exampleHost" [item]="currentItem"></ng-template> -->
-
+<!-- ? This is for nomal method for creating tabs -->
 <!-- <mat-tab-group mat-align-tabs="center">
   <mat-tab label="First" [times]="4" appTabs>Content 1</mat-tab>
   <mat-tab label="Second">Content 2</mat-tab>
   <mat-tab label="Third">Content 3</mat-tab>
 </mat-tab-group> -->
-<app-card [tabs]="tabs" [config]="tabConfiguration"></app-card>
