@@ -1,5 +1,8 @@
 <!-- # This is Main Code where we give the configuration to the code it will append to the child component -->
-<app-card [tabs]="tabs" [config]="tabConfiguration"></app-card>
+<app-card
+  [tabs]="['Tab 1', 'Tab 2', 'Tab 3', 'Tab 4']"
+  [parentStyle]="myStyles"
+></app-card>
 
 <!-- *This is for calling the directives for the creating render2 -->
 <!-- <div [height]="200" [width]="200" [times]="4" appTabs></div> -->

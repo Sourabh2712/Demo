@@ -9,15 +9,21 @@ import { Renderer2, ElementRef, RendererFactory2 } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  constructor(private renderer: Renderer2, private el: ElementRef) {}
+  // constructor(private renderer: Renderer2, private el: ElementRef) {}
+  constructor() {}
   title = 'Demo';
-  // @Input() time: any;
-  tabs = ['Tab 1', 'Tab 2', 'Tab 3', 'Tab 4'];
-  currentItem = 'Television';
-  tabConfiguration = {};
+  tabs: any;
+  myStyles = {
+    'background-color': 'lime',
+    'font-size': '20px',
+    'font-weight': 'bold',
+  };
 
   // ?  This code is for adding Component portal to the child
   // exampleHost: ComponentPortal<any> | undefined;
+  // tabs = ['Tab 1', 'Tab 2', 'Tab 3', 'Tab 4'];
+  // currentItem = 'Television';
+  // @Input() time: any;
 
   ngOnInit() {
     // this.exampleHost = new ComponentPortal(CardComponent);

@@ -3,6 +3,7 @@ import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { COMMA, ENTER } from '@angular/cdk/keycodes';
 import { ElementRef, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { NgStyle } from '@angular/common';
 
 @Component({
   selector: 'app-card',
@@ -12,7 +13,9 @@ import { FormControl } from '@angular/forms';
 })
 export class CardComponent implements OnInit {
   @Input() tabs: any;
-  @Input() config: any;
+  @Input() item = '';
+
+  @Input() parentStyle: any;
 
   constructor() {}
 
@@ -22,16 +25,13 @@ export class CardComponent implements OnInit {
   }
   // tabs = ['Tab 1', 'Tab 2', 'Tab 3', 'Tab 4'];
 
-  // @Input()
-  // tabs: any[] = [];
   selected = new FormControl(0);
-  tabt: string = '';
-  @Input() item = '';
 }
 
 export class TabGroupAlignExample {}
 
 // ?This function s for the adding tab dynamically when we click on addfuntin in HTML if want to add put these line in export class
+// tabt: string = '';
 // addTab(selectAfterAdding: boolean) {
 //   if (this.tabt != '') {
 //     this.tabs.push(this.tabt);
